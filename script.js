@@ -1,4 +1,4 @@
-var map = L.map('map').setView([37.757889,-122.5773406], 11);
+var map = L.map('map').setView([37.757889,-122.5773406], 10);
 
   // load a tile layer
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
@@ -14,3 +14,13 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data).addTo(map);
   });
+
+var ratIcon = L.icon({
+    iconUrl: 'rat.gif',
+    iconSize: [50,40]
+  }); 
+  L.geoJson(data  ,{
+    pointToLayer: function(feature,latlng){
+	  return L.marker(latlng,{icon: ratIcon});
+    }
+  } 
