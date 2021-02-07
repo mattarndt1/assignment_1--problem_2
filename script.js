@@ -13,14 +13,15 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext
   $.getJSON("https://raw.githubusercontent.com/gbrunner/adv-python-for-gis-and-rs/master/Week%201/sf_crime.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data).addTo(map);
-  });
+	  
 
-var ratIcon = L.icon({
-    iconUrl: 'rat.gif',
-    iconSize: [50,40]
-  }); 
-  L.geoJson(data  ,{
-    pointToLayer: function(feature,latlng){
-	  return L.marker(latlng,{icon: ratIcon});
-    }
-  } );
+	var ratIcon = L.icon({
+	    iconUrl: 'rat.gif',
+	    iconSize: [25,15]
+	  }); 
+	  L.geoJson(data  ,{
+	    pointToLayer: function(feature,latlng){
+		  return L.marker(latlng,{icon: ratIcon});
+	    }
+	  } );
+  });
