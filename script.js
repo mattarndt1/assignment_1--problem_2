@@ -23,4 +23,4 @@ var ratIcon = L.icon({
     pointToLayer: function(feature,latlng){
 	  return L.marker(latlng,{icon: ratIcon});
     }
-  } 
+  } );
