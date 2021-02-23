@@ -11,8 +11,12 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext
 
   // load GeoJSON from an external file
   $.getJSON("https://github.com/mattarndt1/project_1--leaflet/blob/main/LCF_boundary.geojson",function(data){
+	  
     // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
+    L.geoJson(data{	     
+	    "color": "#0000ff",
+	    "weight": 5
+	      }).addTo(map);
 	  
 /*
 	var ratIcon = L.icon({
