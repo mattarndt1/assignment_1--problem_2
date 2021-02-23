@@ -10,11 +10,11 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext
 }).addTo(map);
 
   // load GeoJSON from an external file
-  $.getJSON("https://raw.githubusercontent.com/gbrunner/adv-python-for-gis-and-rs/master/Week%201/sf_crime.geojson",function(data){
+  $.getJSON("https://github.com/mattarndt1/project_1--leaflet/blob/main/LCF_boundary.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data).addTo(map);
 	  
-
+/*
 	var ratIcon = L.icon({
 	    iconUrl: 'rat.gif',
 	    iconSize: [25,15]
@@ -24,4 +24,5 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext
 		  return L.marker(latlng,{icon: ratIcon});
 	    }
 	  } );
+	  */
   });
